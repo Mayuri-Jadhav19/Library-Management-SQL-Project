@@ -1,0 +1,106 @@
+USE library_management;
+
+-- 1. Total Books
+SELECT COUNT(*) AS total_books
+FROM Books;
+
+-- 2. Average Book Price
+SELECT ROUND(AVG(price), 2) AS average_price
+FROM Books;
+
+-- 3. Most Expensive Book
+SELECT book_name, price
+FROM Books
+ORDER BY price DESC
+LIMIT 1;
+
+-- 4. Total Sales
+SELECT SUM(total_amount) AS total_sales
+FROM Orders;
+
+-- 5. Total Orders
+SELECT COUNT(*) AS total_orders
+FROM Orders;
+
+-- 6. Top Selling Book
+SELECT
+    b.book_name,
+    SUM(o.quantity) AS total_quantity_sold
+FROM Orders o
+JOIN Books b ON o.book_id = b.book_id
+GROUP BY b.book_id, b.book_name
+ORDER BY total_quantity_sold DESC
+LIMIT 1;
+
+-- 7. Category-wise Sales
+SELECT
+    b.category,
+    SUM(o.total_amount) AS total_sales
+FROM Orders o
+JOIN Books b ON o.book_id = b.book_id
+GROUP BY b.category
+ORDER BY total_sales DESC;
+
+-- 8. Top 5 Customers
+SELECT
+    c.customer_name,
+    c.city,
+    SUM(o.total_amount) AS total_spent
+FROM Orders o
+JOIN Customers c ON o.customer_id = c.customer_id
+GROUP BY c.customer_id, c.customer_name, c.city
+ORDER BY total_spent DESC
+LIMIT 5;
+
+-- 9. Monthly Sales
+SELECT
+    MONTH(order_date) AS month_number,
+    SUM(total_amount) AS monthly_sales
+FROM Orders
+GROUP BY MONTH(order_date)
+ORDER BY month_number;
+
+-- 10. Low Stock Books
+SELECT
+    book_name,
+    category,
+    stock
+FROM Books
+WHERE stock < 10
+ORDER BY stock ASC;
+
+-- 11. Books Above Average Price
+SELECT
+    book_name,
+    category,
+    price
+FROM Books
+WHERE price > (
+    SELECT AVG(price)
+    FROM Books
+)
+ORDER BY price DESC;
+
+-- 12. Customer Orders
+SELECT
+    c.customer_name,
+    COUNT(o.order_id) AS total_orders
+FROM Customers c
+JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.customer_name
+HAVING COUNT(o.order_id) > 1
+ORDER BY total_orders DESC;
+
+-- 13. Complete Sales Report
+SELECT
+    o.order_id,
+    c.customer_name,
+    c.city,
+    b.book_name,
+    b.category,
+    o.order_date,
+    o.quantity,
+    o.total_amount
+FROM Orders o
+JOIN Customers c ON o.customer_id = c.customer_id
+JOIN Books b ON o.book_id = b.book_id;
