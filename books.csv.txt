@@ -1,0 +1,21 @@
+book_id,book_name,author,category,price,stock
+1,Python Basics,John Smith,Programming,450,20
+2,SQL Mastery,David Lee,Database,550,15
+3,Power BI Guide,Sarah Khan,Analytics,600,12
+4,Data Science Handbook,Robert Brown,Data Science,750,10
+5,Excel Advanced,Michael Clark,Analytics,400,25
+6,Learning MySQL,James Wilson,Database,500,18
+7,Python Projects,Emma Davis,Programming,650,14
+8,Business Analytics,Olivia Martin,Analytics,700,8
+9,Machine Learning,Daniel Taylor,Data Science,800,7
+10,Web Development,Sophia Moore,Programming,550,16
+11,PostgreSQL Guide,William Anderson,Database,620,11
+12,Data Visualization,Mia Thomas,Analytics,580,13
+13,Statistics Basics,Noah Jackson,Data Science,450,20
+14,Advanced SQL,Lucas White,Database,720,9
+15,Power BI Projects,Ava Harris,Analytics,680,10
+16,Python for Data Analysis,Ethan Martin,Programming,750,6
+17,AI Fundamentals,Isabella Thompson,AI,850,5
+18,Data Engineering,Henry Garcia,Data Engineering,900,4
+19,Cloud Computing,Emily Martinez,Cloud,780,8
+20,SQL Interview Guide,James Robinson,Database,480,17

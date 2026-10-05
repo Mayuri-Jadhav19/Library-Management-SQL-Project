@@ -1,0 +1,21 @@
+customer_id,customer_name,city,email
+101,Mayuri Jadhav,Pune,mayuri@gmail.com
+102,Aarav Patil,Mumbai,aarav@gmail.com
+103,Sneha Sharma,Pune,sneha@gmail.com
+104,Rahul Deshmukh,Nashik,rahul@gmail.com
+105,Priya Kulkarni,Pune,priya@gmail.com
+106,Aditya Joshi,Nagpur,aditya@gmail.com
+107,Neha Pawar,Mumbai,neha@gmail.com
+108,Rohan More,Pune,rohan@gmail.com
+109,Pooja Shinde,Kolhapur,pooja@gmail.com
+110,Akash Chavan,Pune,akash@gmail.com
+111,Isha Gupta,Mumbai,isha@gmail.com
+112,Vikas Kale,Nashik,vikas@gmail.com
+113,Kavya Singh,Pune,kavya@gmail.com
+114,Sahil Pawar,Aurangabad,sahil@gmail.com
+115,Riya Patil,Pune,riya@gmail.com
+116,Manish More,Mumbai,manish@gmail.com
+117,Tanvi Joshi,Nagpur,tanvi@gmail.com
+118,Omkar Shinde,Pune,omkar@gmail.com
+119,Sakshi Deshmukh,Nashik,sakshi@gmail.com
+120,Kunal Jadhav,Pune,kunal@gmail.com
